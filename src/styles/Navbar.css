@@ -1,0 +1,232 @@
+/* Navbar.css */
+.navbar {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: padding 0.3s ease; /* Smooth transition for padding */
+  gap: 20px; /* Adjust the gap between items */
+}
+
+.home-button,
+.resume-button,
+.skills-button,
+.projects-button,
+.contact-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  height: 100px;
+  border-radius: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  margin: 0 10px; /* Add spacing between buttons */
+}
+
+.home-button:hover,
+.resume-button:hover,
+.skills-button:hover,
+.projects-button:hover,
+.contact-button:hover {
+  transform: translateY(-3px);
+}
+
+.home-button.active,
+.resume-button.active,
+.skills-button.active,
+.projects-button.active,
+.contact-button.active {
+  background: #dd36d6;
+  background: linear-gradient(111deg, #dd36d6 0%, #49374b 100%);
+  transform: scale(1.05);
+}
+
+.home-button:not(.active),
+.resume-button:not(.active),
+.skills-button:not(.active),
+.projects-button:not(.active),
+.contact-button:not(.active) {
+  background: rgb(225, 232, 239);
+  background: linear-gradient(
+    110deg,
+    rgb(255, 255, 255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-icon,
+.resume-icon,
+.skills-icon,
+.projects-icon,
+.contact-icon1 {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.home-button span,
+.resume-button span,
+.skills-button span,
+.projects-button span,
+.contact-button span {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgb(246, 246, 246);
+  font-weight: 500;
+}
+
+.home-button.active span,
+.resume-button.active span,
+.skills-button.active span,
+.projects-button.active span,
+.contact-button.active span {
+  color: #fff;
+}
+
+.home-button:not(.active) span,
+.resume-button:not(.active) span,
+.skills-button:not(.active) span,
+.projects-button:not(.active) span,
+.contact-button:not(.active) span {
+  color: rgb(2, 0, 36);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Change to row for larger screens */
+    flex-wrap: wrap; /* Allow items to wrap into multiple lines */
+    justify-content: center; /* Center items */
+    padding: 10px; /* Reduced padding */
+  }
+
+  .home-button,
+  .resume-button,
+  .skills-button,
+  .projects-button,
+  .contact-button {
+    width: 100px; /* Keep the original width */
+    height: 100px; /* Keep the original height */
+    margin: 10px; /* Margin for spacing */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center icon and text horizontally */
+    border-radius: 20px; /* Keep original border radius */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .home-button span,
+  .resume-button span,
+  .skills-button span,
+  .projects-button span,
+  .contact-button span {
+    font-size: 14px; /* Adjust font size */
+    margin-left: 8px; /* Space between icon and text */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    flex-direction: row; /* Change to row for larger screens */
+    flex-wrap: wrap; /* Allow items to wrap into multiple lines */
+    justify-content: center; /* Center items */
+    padding: 10px;
+    padding: 5px; /* Further reduced padding */
+  }
+
+  .home-button,
+  .resume-button,
+  .skills-button,
+  .projects-button,
+  .contact-button {
+    width: 100px; /* Keep the original width */
+    height: 100px; /* Keep the original height */
+    margin: 10px; /* Margin for spacing */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center icon and text horizontally */
+    border-radius: 20px; /* Keep original border radius */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .home-button span,
+  .resume-button span,
+  .skills-button span,
+  .projects-button span,
+  .contact-button span {
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .home-icon,
+  .resume-icon,
+  .skills-icon,
+  .projects-icon,
+  .contact-icon1 {
+    width: 30px; /* Even smaller icon width */
+    height: 30px; /* Even smaller icon height */
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar {
+    padding: 5px; /* Further reduced padding */
+  }
+
+  .home-button,
+  .resume-button,
+  .skills-button,
+  .projects-button,
+  .contact-button {
+    width: 100px; /* Keep the original width */
+    height: 100px; /* Keep the original height */
+    margin: 10px; /* Margin for spacing */
+    display: flex; /* Flexbox for centering content */
+    align-items: center; /* Center icon and text vertically */
+    justify-content: center; /* Center icon and text horizontally */
+    border-radius: 20px; /* Keep original border radius */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .home-button span,
+  .resume-button span,
+  .skills-button span,
+  .projects-button span,
+  .contact-button span {
+    font-size: 10px; /* Smaller font size for very small screens */
+  }
+
+  .home-icon,
+  .resume-icon,
+  .skills-icon,
+  .projects-icon,
+  .contact-icon1 {
+    width: 25px; /* Smaller icon width */
+    height: 25px; /* Smaller icon height */
+  }
+}
+/* Navbar Styles */
+
+.nav-button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-button.active {
+  background-color: #8b5cf6; /* Active button color */
+  color: white; /* Text color for active button */
+}

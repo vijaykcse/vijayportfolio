@@ -1,0 +1,53 @@
+/* App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    30deg,
+    rgb(167, 139, 227) 0%,
+    rgba(241, 241, 241, 1) 54%,
+    rgb(174, 143, 235) 100%
+  );
+  padding: 20px; /* Add padding for better spacing */
+}
+
+.main-layout {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items at the start vertically */
+  margin-top: 20px; /* Space below the navbar */
+}
+
+.main-content {
+  width: 75%; /* Main content takes the remaining space */
+  padding: 20px; /* Add padding for main content */
+  background-color: #ffffff; /* White background for main content */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Ensure responsive design */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+  }
+
+  .profile-card {
+    width: 90%; /* Full width on small screens */
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Space below the profile card */
+  }
+
+  .main-content {
+    width: 90%; /* Full width on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-card,
+  .main-content {
+    width: 95%; /* Slightly wider on very small screens */
+  }
+}

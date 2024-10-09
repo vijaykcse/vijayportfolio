@@ -1,0 +1,31 @@
+/* Card.css */
+.card {
+  width: 250px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5em;
+}
+
+.card-icon {
+  font-size: 2em;
+  color: #ff4081;
+  margin-bottom: 10px;
+}

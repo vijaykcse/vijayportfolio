@@ -1,0 +1,232 @@
+/* About.css */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+}
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+}
+
+.about-card heading {
+  font-size: 10px;
+  color: #b41919;
+}
+
+.about-title {
+  color: #888;
+}
+
+.about-description {
+  width: 60%;
+  padding: 0 20px;
+}
+
+.about-description h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-description p {
+  color: #555;
+  line-height: 1.6em;
+}
+
+/* Home.css */
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile-header {
+  background-color: #8b5cf6;
+  height: 80px;
+  margin: -20px -20px 0;
+  position: relative;
+}
+
+.profile-info {
+  margin-top: 225px;
+  margin-left: 110px;
+  width: 25%;
+}
+
+.profile-name {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.profile-title {
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+.social-icon-container {
+  width: 30%;
+  height: 60px;
+  background-color: #f1f1f1;
+  border-radius: 11%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  width: 34px;
+  margin-top: 15%;
+  height: 34px;
+  color: #8265ed;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 11px;
+}
+
+.contact-icon {
+  width: 33px;
+  height: 45px;
+  margin-right: 11px;
+}
+
+.about-content {
+  width: 60%;
+}
+
+.about-title {
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.about-description {
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #d3dce6; /* Bottom border */
+  padding-bottom: 10px;
+}
+
+.contact-icon {
+  color: #4a5568; /* Dark gray color for icons */
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  font-weight: 600; /* Bold title */
+  color: #2d3748; /* Darker text color */
+  margin-bottom: 2px;
+}
+
+/* Optional: Add hover effect for icons */
+.contact-icon:hover {
+  color: #3182ce; /* Change color on hover */
+}
+
+/* New styles for the About Me sections */
+
+.about-section-card {
+  padding: 20px;
+  border: 1px solid #d1d5db; /* Light gray border */
+  border-radius: 12px; /* Rounded corners */
+  /* background-color: #ffffff; White background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.about-section-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.about-section-card h2 {
+  /* Title size */
+  font-weight: 600; /* Bold title */
+  color: #1f2937; /* Dark text color */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.about-section-card p {
+  font-size: 1rem; /* Text size */
+  color: #4b5563; /* Darker gray text */
+  line-height: 1.5; /* Line height for readability */
+}
+.fixed-content {
+  display: flex;
+  margin-left: 350px; /* Adjust based on the width of the profile card */
+}
+
+/* Updated styles for Home section */
+
+.about-card {
+  width: 83%; /* Adjust width as needed */
+  padding-left: 20px; /* Space between ProfileCard and About Me */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .home-section {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items */
+  }
+
+  .about-card {
+    width: 100%;
+    margin: 10px; /* Full width on small screens */
+    padding-left: 0; /* Remove left padding */
+  }
+
+  .profile-card {
+    width: 100%; /* Full width on small screens */
+    margin-bottom: 20px; /* Space below the profile card */
+  }
+
+  .Grid-container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}
+
+.Grid-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+/* New styles for icon alignment */
+
+.about-section h2 {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.material-icons {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 24px; /* Adjust icon size */
+}

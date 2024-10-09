@@ -1,0 +1,96 @@
+/* src/styles/ProfileCard.css */
+
+.profile-card {
+  max-width: 50px; /* Set a max width for larger screens */
+  min-width: max-content; /* Optional: Set a minimum width for smaller screens */
+  background: #ffffff;
+  max-height: min-content;
+  height: auto; /* Changed to auto for dynamic height */
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-right: 29px; /* Space between ProfileCard and main content */
+}
+
+.profile-pic {
+  width: 90%; /* Changed to percentage for responsiveness */
+  height: auto; /* Changed to auto to maintain aspect ratio */
+  max-width: 202px; /* Set a max width */
+  margin: 7px;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon-container {
+  width: 20%; /* Set width to percentage for responsiveness */
+  height: auto; /* Changed to auto for dynamic height */
+  margin: 10px;
+  background-color: #f1f1f1;
+  border-radius: 11%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.profile-heading {
+  font-size: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 10px;
+}
+.contact-card {
+  padding: 10px;
+  border-radius: 12px; /* Rounded corners */
+  margin: 10px; /* Optional margin */
+  text-align: left; /* Left-align text */
+}
+.contact-info {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  font-size: 17px; /* Default font size */
+  color: #4b5563;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-bottom: 11px;
+}
+
+.contact-icon {
+  width: 28px; /* Keep fixed size for icons */
+  height: 45px; /* Keep fixed size for icons */
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Optional: Style for the labels */
+.contact-item span.font-semibold {
+  font-weight: 600; /* Make the label bold */
+  margin-right: 4px; /* Space between label and value */
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .profile-card {
+    width: 100%; /* Full width on small screens */
+    margin: 0; /* Remove margin */
+  }
+
+  .profile-pic {
+    width: 150px; /* Adjust size for mobile */
+    height: 150px; /* Adjust size for mobile */
+  }
+
+  .social-icon-container {
+    width: 80%; /* Adjust width for mobile */
+    height: auto; /* Maintain dynamic height */
+  }
+
+  .contact-info {
+    margin: 10px; /* Reduced margin for mobile */
+    font-size: 18px; /* Smaller font size for mobile */
+  }
+}
