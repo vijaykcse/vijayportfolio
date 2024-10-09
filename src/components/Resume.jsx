@@ -54,10 +54,7 @@ const ResumePage = () => {
           </p>
         </section>
       </div>
-      <a
-        href={`${process.env.PUBLIC_URL}/public/resumeDoc/vijayresume.pdf`} // Corrected path
-        download="Vijay_Resume.pdf"
-      >
+      <a>
         <button className="download-button">Download Resume</button>
       </a>
     </div>
