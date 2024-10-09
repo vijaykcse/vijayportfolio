@@ -54,9 +54,14 @@ const ResumePage = () => {
           </p>
         </section>
       </div>
-      {/* <a>
+      <a
+        href="https://vijaykcse.github.io/vijayportfolio/resumeDoc/vijayresume.pdf"
+        download="Vijay_Resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <button className="download-button">Download Resume</button>
-      </a> */}
+      </a>
     </div>
   );
 };

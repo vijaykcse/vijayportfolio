@@ -19,16 +19,33 @@ const ProfileCard = () => {
       <p className="profile-card-content">FullStack Developer</p>
       <div className="flex justify-center space-x-3 mb-6 social-icons">
         <div className="social-icon-container">
-          <Facebook className="w-6 h-6 text-blue-600 social-icon" />
+          <a
+            href="https://github.com/vijaykcse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github className="w-6 h-6 text-gray-800 social-icon" />
+          </a>
         </div>
         <div className="social-icon-container">
-          <Linkedin className="w-6 h-6 text-blue-700 social-icon" />
+          <a
+            href="https://www.linkedin.com/in/vijay-kumar-08vh"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Linkedin className="w-6 h-6 text-blue-700 social-icon" />
+          </a>
         </div>
         <div className="social-icon-container">
-          <Twitter className="w-6 h-6 text-blue-400 social-icon" />
+          <a>
+            <Facebook className="w-6 h-6 text-blue-600 social-icon" />
+          </a>
         </div>
+
         <div className="social-icon-container">
-          <Github className="w-6 h-6 text-gray-800 social-icon" />
+          <a>
+            <Twitter className="w-6 h-6 text-blue-400 social-icon" />
+          </a>
         </div>
       </div>
       <div className="space-y-2 text-sm text-gray-700 contact-info contact-card">
