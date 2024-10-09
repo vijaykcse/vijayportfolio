@@ -1,5 +1,5 @@
 {
-  "homepage": "https://vijaykcse.github.io/vijay-porftfolio",
+  "homepage": "https://vijaykcse.github.io/vijayportfolio",
   "name": "vijay-portfolio",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "vite build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
