@@ -54,9 +54,9 @@ const ResumePage = () => {
           </p>
         </section>
       </div>
-      <a>
+      {/* <a>
         <button className="download-button">Download Resume</button>
-      </a>
+      </a> */}
     </div>
   );
 };
