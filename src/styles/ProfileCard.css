@@ -30,7 +30,14 @@
   background-color: #f1f1f1;
   border-radius: 11%;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
 }
+
+.social-icon-container:hover {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 20px; /* Increase shadow on hover */
+}
+
 .profile-heading {
   font-size: 20px;
 }
