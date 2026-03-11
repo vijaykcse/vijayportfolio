@@ -11,7 +11,7 @@ import CustomCursor from './components/CustomCursor';
 import Loader from './components/Loader';
 function App() {
   return (
-    <Router basename="/vijayportfolio">
+    <Router>
       <div className="min-h-screen bg-ghost dark:bg-[#0d0829] font-poppins transition-colors duration-300">
        <CustomCursor /> {/* 👈 Add CustomCursor at the top level */}
         <Navbar />
