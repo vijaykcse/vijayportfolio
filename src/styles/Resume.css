@@ -1,0 +1,80 @@
+/* ResumePage.css */
+
+.resume-container {
+  max-width: 800px; /* Limit the width of the resume */
+  margin: 0 auto; /* Center the resume */
+  padding: 20px; /* Add padding */
+  background-color: #ffffff; /* Light background color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.resume-grid {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between sections */
+}
+
+.resume-section {
+  background-color: #f9f9f9; /* Light background for sections */
+  padding: 15px; /* Padding for sections */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  transition: transform 0.2s, background-color 0.2s; /* Smooth transition */
+}
+
+.resume-section:hover {
+  background-color: #e0e7ff; /* Change background color on hover */
+  transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.resume-section h3 {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  font-size: 1.5em; /* Font size for section titles */
+  color: #444; /* Darker gray color */
+  border-bottom: 2px solid #8b5cf6; /* Underline for section titles */
+  padding-bottom: 5px; /* Space below the title */
+}
+
+/* Ensure consistent padding and margins */
+.resume-section p {
+  margin: 5px 0; /* Space between paragraphs */
+  color: #555; /* Darker gray color */
+}
+
+.education-item {
+  margin-bottom: 10px; /* Space between education items */
+}
+
+.education-item h4 {
+  margin: 0; /* Remove default margin */
+  color: #333; /* Dark text color */
+}
+
+.education-item p {
+  margin: 5px 0; /* Space between paragraphs */
+  color: #555; /* Darker gray color */
+}
+
+.download-button {
+  background-color: #8b5cf6; /* Button color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 16px; /* Font size */
+  margin-top: 20px; /* Space above the button */
+}
+
+.download-button:hover {
+  background-color: #7a4bcf; /* Darker shade on hover */
+}
+
+.material-icons {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 24px; /* Adjust icon size */
+}

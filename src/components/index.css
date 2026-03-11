@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+/* Define your custom colors and fonts here for v4 */
+@theme {
+  --color-persian: #27187E;
+  --color-ghost: #F7F7FF;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-poppins);
+  background-color: var(--color-ghost);
+  color: var(--color-persian);
+}

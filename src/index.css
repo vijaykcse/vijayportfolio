@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* 👈 THIS LINE IS THE MAGIC FIX FOR V4 DARK MODE TOGGLE */
+@variant dark (&:where(.dark, .dark *)); 
+
+:root {
+  --color-persian: #27187E;
+  --color-ghost: #F7F7FF;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+body {
+  font-family: var(--font-poppins);
+  transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Global dark mode background */
+html.dark body {
+  background-color: #0d0829; 
+  color: var(--color-ghost);
+}
+/* Custom Scrollbar for Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ghost); /* #F7F7FF */
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #0d0829; /* Deep Persian background for dark mode */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-persian); /* #27187E */
+  border-radius: 10px;
+  border: 3px solid var(--color-ghost);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3b82f6; /* Brighter blue for visibility in dark mode */
+  border: 3px solid #0d0829;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1e135d; /* Darker Persian on hover */
+}
