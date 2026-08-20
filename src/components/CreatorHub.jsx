@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { FaYoutube, FaInstagram, FaLinkedinIn, FaVideo } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 const CreatorHub = () => {
@@ -8,73 +9,98 @@ const CreatorHub = () => {
       name: "YouTube",
       handle: "@vijayvisions-7",
       url: "https://www.youtube.com/@vijayvisions-7",
-      icon: <FaYoutube className="text-4xl" />,
-      color: "hover:bg-red-500 hover:border-red-500 hover:text-white",
-      description: "Tech updates, mobile reviews, and gadget tricks."
+      icon: <FaYoutube className="text-3xl text-red-500" />,
+      badge: "Tech Reviews & Tutorials",
+      description: "In-depth mobile reviews, tech updates, software development walkthroughs, and gadget tricks."
     },
     {
       name: "Instagram",
       handle: "@vijay_visions",
       url: "https://www.instagram.com/vijay_visions?igsh=MTQ3YzRwZHRpc3EzYQ==",
-      icon: <FaInstagram className="text-4xl" />,
-      color: "hover:bg-pink-600 hover:border-pink-600 hover:text-white",
-      description: "Bite-sized tech tips, UI/UX designs, and aesthetic setups."
+      icon: <FaInstagram className="text-3xl text-pink-500" />,
+      badge: "UI/UX & Code Snippets",
+      description: "Bite-sized developer tips, clean UI/UX designs, aesthetic workspace setups, and daily tech reels."
     },
     {
       name: "X (Twitter)",
       handle: "@vijayvisions7",
       url: "https://x.com/vijayvisions7",
-      icon: <FaXTwitter className="text-4xl" />,
-      color: "hover:bg-black dark:hover:bg-gray-700 hover:border-black dark:hover:border-gray-700 hover:text-white",
-      description: "Daily tech news, coding thoughts, and quick updates."
+      icon: <FaXTwitter className="text-3xl text-stone-900 dark:text-stone-100" />,
+      badge: "Tech News & Thoughts",
+      description: "Daily software thoughts, tech news breakdowns, web dev insights, and real-time updates."
     },
     {
       name: "LinkedIn",
       handle: "vijay-kumar-08vh",
       url: "https://www.linkedin.com/in/vijay-kumar-08vh/",
-      icon: <FaLinkedinIn className="text-4xl" />,
-      color: "hover:bg-blue-600 hover:border-blue-600 hover:text-white",
-      description: "Professional networking and full-stack project breakdowns."
+      icon: <FaLinkedinIn className="text-3xl text-blue-600" />,
+      badge: "Professional Network",
+      description: "Career milestones, full-stack project breakdowns, collaboration updates, and tech articles."
     }
   ];
 
   return (
-    <section id="creator" className="w-full bg-ghost dark:bg-[#0d0829] py-24 px-6 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto flex flex-col items-center">
+    <section id="creator" className="py-24 px-6 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col items-center">
         
-        {/* Header Title - FIXED GRADIENT */}
+        {/* Header Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-persian dark:text-ghost mb-4">
-            The <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-600 to-blue-500 dark:from-blue-400 dark:via-purple-400 dark:to-blue-300">Vijay Visions</span> Hub
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto">
-            Beyond writing code, I love sharing knowledge. Join my community across platforms where we explore the latest in tech, gadgets, and software development.
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-600 dark:text-orange-400 text-xs font-bold uppercase tracking-widest mb-4"
+          >
+            <FaVideo className="text-orange-500" /> Digital Content & Community
+          </motion.div>
+
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-4xl sm:text-5xl font-extrabold text-stone-900 dark:text-stone-100 tracking-tight mb-4"
+          >
+            The <span className="text-orange-gradient">Vijay Visions</span> Hub
+          </motion.h2>
+          <p className="text-base text-stone-600 dark:text-stone-400 font-normal max-w-2xl mx-auto">
+            Beyond writing code, I love sharing tech knowledge. Explore my channels across platforms where we dive into software, gadgets, and development.
           </p>
         </div>
 
-        {/* Social Cards Grid - FIXED DARK MODE CARDS */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl">
+        {/* Social Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
           {socialLinks.map((link, index) => (
-            <a 
+            <motion.a 
               key={index}
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              // Changed to dark:bg-white/5 for a guaranteed dark glass effect
-              className={`flex items-start p-6 bg-white dark:bg-white/5 border-2 border-persian/10 dark:border-white/10 rounded-3xl shadow-lg transition-all duration-300 group ${link.color}`}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="glass-orange-card p-7 rounded-3xl border border-orange-500/15 hover:border-orange-500/40 shadow-lg hover:shadow-xl transition-all duration-300 flex items-start gap-6 group hover:-translate-y-1"
             >
-              <div className="p-4 bg-persian/5 dark:bg-white/10 text-persian dark:text-white rounded-2xl group-hover:bg-white/20 group-hover:text-white transition-colors">
+              <div className="p-4 rounded-2xl bg-orange-500/10 dark:bg-stone-800 border border-orange-500/20 group-hover:scale-110 transition-transform">
                 {link.icon}
               </div>
-              <div className="ml-6">
-                {/* Guaranteed text colors for dark mode */}
-                <h3 className="text-xl font-bold text-persian dark:text-white group-hover:text-white mb-1">{link.name}</h3>
-                <p className="text-sm font-semibold text-persian/60 dark:text-gray-400 group-hover:text-white/80 mb-2">{link.handle}</p>
-                <p className="text-sm text-gray-600 dark:text-gray-300 group-hover:text-white/90 leading-relaxed">
+              <div className="flex-1">
+                <div className="flex items-center justify-between gap-2 mb-1">
+                  <h3 className="text-xl font-bold text-stone-900 dark:text-stone-100 group-hover:text-orange-500 transition-colors">
+                    {link.name}
+                  </h3>
+                  <span className="text-[10px] font-extrabold px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20 uppercase tracking-wide">
+                    {link.badge}
+                  </span>
+                </div>
+                <p className="text-xs font-semibold text-orange-600 dark:text-orange-400 mb-2">
+                  {link.handle}
+                </p>
+                <p className="text-stone-600 dark:text-stone-300 text-sm font-normal leading-relaxed">
                   {link.description}
                 </p>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
 
